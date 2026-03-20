@@ -1,0 +1,28 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+
+<main>
+    <h1> <%= about %> </h1>
+    <div id="contenedor-productos">
+
+        <!-- Vamos a iterar el array de productos que le pasamos desde el endpoint -->
+        <% productos.forEach(producto => { %>
+            <div class="carta-producto">
+                <div class="carta-imagen">
+                    <img src="<%= producto.img_url %>" alt="<%= producto.nombre %>">
+                </div>
+                <div class="carta-texto">
+                    <h5><%= producto.nombre %></h5>
+                    <div class="carta-id-precio">
+                        <p>Id: <%= producto.id %></p>
+                        <p>$<%= producto.precio %></p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+
+    </div>
+</main>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,52 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+
+<main class="main-crear">
+    <div class="recuadro formulario">
+    <h1> <%= about %> </h1>
+    <form id="altaProductos-formulario" class="productos-formulario-amplio">
+
+        <label class="texto-id" for="nombreProducto">Nombre</label>
+        <input class="input-formulario" type="text" name="nombre" id="nombreProducto" required>
+        <br>
+
+        <label class="texto-id" for="imagenProducto">Imagen</label>
+        <input class="input-formulario"  type="text" name="img_url" id="imagenProducto" required>
+        <br>
+
+        <label class="texto-id" for="categoriaProducto">Categoria</label>
+        <select class="input-formulario" name="tipo" id="categoriaProducto" required>
+            <option value="FIGURITAS">Figuritas</option>
+            <option value="ACCESORIOS">Accesorios</option>
+        </select>
+        <br>
+
+        <label class="texto-id" for="precioProducto">Precio</label>
+        <input class="input-formulario" type="number" name="precio" id="precioProducto" required>
+        <br>
+
+        <input class="boton" type="submit" value="Crear producto">
+    </form>
+    </div>
+    <hr>
+    <div class="recuadro formulario">
+    <h1>Alta Usuario</h1>
+
+    <!-- Formulario para crear usuarios y enviarlos a api/usuarios  -->
+    <form id="altaUsuarios-formulario" class="productos-formulario-amplio">
+        <label class="texto-id" for="correoUsuario">Correo</label>
+        <input class="input-formulario" type="email" name="correo" id="correoUsario" required>
+        <br>
+
+        <label class="texto-id" for="passwordUsuario">Password</label>
+        <input class="input-formulario" type="password" name="password" id="passwordUsuario" autocomplete="off" required>
+        <br>
+
+        <input class="boton" type="submit" value="Crear Usuario">
+    </form>
+    </div>
+</main>
+
+<script src="js/crear.js"></script>
+
+<%- include("partials/footer.ejs") %>
