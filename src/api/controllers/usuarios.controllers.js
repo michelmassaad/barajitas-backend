@@ -77,8 +77,8 @@ export const iniciarSesion =  async(req, res) =>{
         const user = rows[0];
 
         //Setup bcrypt parte II Comparamos el password hasheado (la contrase;a de login hasheada es igual a la BDD?)
-        // const match = await bcrypt.compare(password, user.password) //si ambos hash coinciden, es porque las password son iguales y match devuelve true
-        const match = true;
+        const match = await bcrypt.compare(password, user.password) //si ambos hash coinciden, es porque las password son iguales y match devuelve true
+
         if (match) {
             //Con el correo y password validos, guardamos la sesion 
             req.session.user = {
@@ -98,6 +98,12 @@ export const iniciarSesion =  async(req, res) =>{
 
     } catch (error) {
         console.error("Error en el login",error);
+        // ✅ RESPUESTA DE SEGURIDAD: Evita que la página se quede cargando si algo falla
+        res.status(500).render("login", {
+            title: "Login",
+            about: "Inicio de Sesión",
+            error: "Error interno del servidor. Reintentá más tarde."
+        });
         
     }
 };

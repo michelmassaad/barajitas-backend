@@ -54,7 +54,7 @@ altaUsuarios_formulario.addEventListener("submit", event => {
 
 
 async function enviarUsuario(data) {
-    console.table(data); // Recibimos correctamente los datos del formulario
+    // console.table(data); // Recibimos correctamente los datos del formulario
 
     try {
         // let url = "http://localhost:3000/api/usuarios"

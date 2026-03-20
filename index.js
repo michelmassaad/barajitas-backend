@@ -24,6 +24,10 @@ app.use(cors());
 // Middleware que convierte los datos "application/json" 
 app.use(express.json()); 
 
+// Le dice a Express que confíe en el "Proxy" (el intermediario de Railway) 
+// para que pueda leer las cookies seguras.
+app.set('trust proxy', 1);
+
 // Middleware para servir archivos estaticos: construimos la ruta relativa para servir los archivos de la carpeta /public
 app.use(express.static(join(__dirname, "src", "public"))); // Gracias a esto podemos servir los archivos de la carpeta public, como http://localhost:3000/img/haring1.png
 
@@ -34,7 +38,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: session_key, // Esto firma las cookies para evitar manipulacion, un mecanismo de seguridad que usa una key o contraseña bien fuerte y larga
     resave: false, // Esto evita guardar la sesion si no hubo cambios
-    saveUninitialized: true // No guarde sesiones vacias
+    saveUninitialized: false, // No guarde sesiones vacias
+    cookie: { 
+        secure: true, // 👈 OBLIGATORIO para HTTPS en producción
+        httpOnly: true 
+    }
 }));
 
 /*===================
@@ -54,18 +62,6 @@ app.use("/", usuarioRoutes);
 
 // Rutas ventas
 app.use("/api/ventas", ventasRoutes);
-
-
-import bcrypt from 'bcrypt';
-
-
-// RUTA TEMPORAL PARA GENERAR CONTRASEÑA
-app.get('/generar-clave', async (req, res) => {
-    const miClaveHasheada = await bcrypt.hash('test', 10);
-    res.send(`<h1>Tu clave encriptada es:</h1> <p>${miClaveHasheada}</p>`);
-});
-
-
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
