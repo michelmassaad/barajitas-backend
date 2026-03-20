@@ -129,7 +129,7 @@ function crearFormularioPut(event, producto) {
 async function actualizarProducto(event) {
     event.preventDefault();
 
-    let url = "http://localhost:3000/api/productos";
+    // let url = "http://localhost:3000/api/productos";
 
     let formData = new FormData(event.target); // Guardamos los datos en un objeto FormData
 

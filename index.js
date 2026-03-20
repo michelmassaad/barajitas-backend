@@ -55,6 +55,23 @@ app.use("/", usuarioRoutes);
 // Rutas ventas
 app.use("/api/ventas", ventasRoutes);
 
+
+import bcrypt from 'bcrypt';
+
+
+// RUTA TEMPORAL PARA GENERAR CONTRASEÑA
+app.get('/generar-clave', async (req, res) => {
+    const miClaveHasheada = await bcrypt.hash('test', 10);
+    res.send(`<h1>Tu clave encriptada es:</h1> <p>${miClaveHasheada}</p>`);
+});
+
+
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+
+
+
+
