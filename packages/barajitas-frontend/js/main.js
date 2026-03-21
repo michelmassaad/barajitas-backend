@@ -34,7 +34,7 @@ function cerrarSesion() {
         sessionStorage.clear();
 
         // redirigimos a la pantalla de Login
-        window.location.href = "bienvenida.html";
+        window.location.href = "index.html";
     }
 }
 
@@ -54,7 +54,7 @@ function protegerRuta() {
     const usuarioLogueado = sessionStorage.getItem("usuario");
     // si no hay usuario logueado redirige a bienvenida
     if (!usuarioLogueado) {
-        window.location.href = "bienvenida.html"; 
+        window.location.href = "index.html"; 
     }
 }
 
