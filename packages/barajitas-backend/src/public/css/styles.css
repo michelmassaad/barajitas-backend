@@ -212,8 +212,9 @@ h1{
 }
 
 #idProd, #idProducto {
-    width: 10%;
+width: 50%;
     margin-top: 7px;
+    margin-bottom: 17px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -304,7 +305,7 @@ select#categoriaProducto:focus, #productoActivo:focus {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%; 
+    width: 25%; 
     max-width: 400px; /* Tamaño perfecto para que entren los dos en PC */
     margin: 0 auto;
     margin-bottom: 30px;
@@ -415,12 +416,6 @@ select#categoriaProducto:focus, #productoActivo:focus {
 /* 3. Contenedor de la pantalla Crear (Para que estén lado a lado) */
 .main-crear {
     display: flex;
-    flex-wrap: wrap; /* Permite bajar si no hay espacio en celu */
-    justify-content: center;
-    gap: 40px; /* Espacio entre las dos cajas */
-    width: 100%;
-    max-width: 1000px; /* Límite máximo para agrupar ambos */
-    margin: 40px auto;
 }
 
 .recuadro.formulario{
