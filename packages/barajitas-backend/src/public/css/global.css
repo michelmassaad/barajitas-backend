@@ -112,10 +112,11 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     margin: auto;
     padding-bottom: 20px;
     border-bottom: 0.5px solid var(--white);
+    max-width: 1000px;
 }
 
 nav ul a {
@@ -327,8 +328,9 @@ h1 {
     justify-content: center;
     margin-top: 15px !important;
     margin: auto;
-    width: 86%;
+    width: 90%;
     margin-bottom: 30px;
+    max-width: 1200px;
 }
 
 .carta-producto {
@@ -444,19 +446,35 @@ h1 {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .productos-formulario-modificar {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
+    background: rgba(30, 41, 59, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .productos-formulario-amplio {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 60%;
     margin: auto;
     flex-direction: column;
     color: var(--white);
