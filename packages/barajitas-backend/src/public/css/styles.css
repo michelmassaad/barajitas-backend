@@ -289,6 +289,14 @@ select#categoriaProducto, #productoActivo {
 
 .login-formulario{
     width: 30% !important;
+    background: rgba(30, 41, 59, 0.80);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
 }
 
 .botones-login {
