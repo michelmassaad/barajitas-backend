@@ -144,7 +144,7 @@ figuritas-store/
 
 ### URL Base
 ```
-https://barajitas-backend-production.up.railway.app
+https://figuritas-backend.up.railway.app
 ```
 
 ### Endpoints
