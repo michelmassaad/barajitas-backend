@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
 /*================
     General
 ================*/
@@ -30,7 +32,7 @@ body {
     
     margin: 0; 
 
-    font-family: monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*================
@@ -231,10 +233,17 @@ h1{
 }
 
 select#categoriaProducto, #productoActivo {
-    height: 22px;
+    padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
 }
 
 .boton {
@@ -268,18 +277,20 @@ select#categoriaProducto, #productoActivo {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 50%; /* Estándar para armonía */
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
     background: rgba(30, 41, 59, 0.80);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px 20px; /* Padding consistente */
+    padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .productos-formulario-modificar {
-    width: 50%; /* Consistente con otros formularios */
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
     background: rgba(30, 41, 59, 0.80);
     backdrop-filter: blur(12px);
@@ -295,7 +306,8 @@ select#categoriaProducto, #productoActivo {
 .productos-formulario-amplio {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
     flex-direction: column;
     color: white;
@@ -308,11 +320,12 @@ select#categoriaProducto, #productoActivo {
 }
 
 .login-formulario{
-    width: 50% !important; /* Consistente con otros formularios */
+    width: 90% !important;
+    max-width: 600px !important;
     background: rgba(30, 41, 59, 0.80);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px 20px; /* Padding consistente */
+    padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -370,6 +383,9 @@ select#categoriaProducto, #productoActivo {
 
 .main-crear{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .recuadro.formulario{
