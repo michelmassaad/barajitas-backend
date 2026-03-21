@@ -103,7 +103,7 @@ barajitas-store/
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/michelmassaad/barajitas-store.git
+   git clone https://github.com/michelmassaad/Figuritas-store.git
    cd barajitas-store
    ```
 
