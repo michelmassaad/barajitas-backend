@@ -239,8 +239,7 @@ select#categoriaProducto, #productoActivo {
 }
 
 .boton {
-    width: 100%;
-    padding: 15px;
+padding: 15px 25px; /* Un padding más equilibrado */
     color: #0f172a;
     font-weight: 800;
     border: none;
@@ -248,8 +247,8 @@ select#categoriaProducto, #productoActivo {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 10px;
     background: white;
+    transition: all 0.3s ease; /* Para que el hover sea suave */
 }
 
 .boton:hover{
@@ -292,15 +291,25 @@ select#categoriaProducto, #productoActivo {
     background: rgba(30, 41, 59, 0.80);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0px 20px;
+    padding: 40px 30px; /* Un poco más de aire arriba y abajo */
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* CRUCIAL: Obliga a los elementos a ir uno debajo del otro */
+    align-items: center;
 }
 
 .botones-login {
     display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Esto crea un espacio limpio entre botón y botón */
+    width: 100%;
+    margin-top: 20px;
+}
+.botones-login .boton {
+    flex: 1; /* Hace que ambos botones midan exactamente lo mismo (50/50) */
+    padding: 15px 10px; /* Ajustamos padding para que entre el texto largo */
+    font-size: 14px; /* Un toque más chico para "Acceso rápido" */
 }
 
 .estilo-formulario{
