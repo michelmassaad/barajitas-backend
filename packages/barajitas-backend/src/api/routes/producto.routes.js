@@ -7,7 +7,7 @@ Es una parte del programa que se ejecuta antes o entre las rutas/endpoints.
 Sirve para revisar, modificar o validar la información que llega
 antes de que llegue al controlador final.
 */
-import { verificarId } from "../middlewares/middlewares.js";
+import { verificarId,   protegerModoDemo } from "../middlewares/middlewares.js";
 import{ crearProducto, eliminarProducto, getProductoPorId, getProductos, modificarProducto, getProductosActivos } from "../controllers/producto.controllers.js";
 
 // Get => obtener todos los productos
@@ -20,13 +20,13 @@ router.get("/activos", getProductosActivos);
 router.get("/:id", verificarId, getProductoPorId);
 
 // POST -> crear nuevo producto
-router.post("/", crearProducto);
+router.post("/",protegerModoDemo, crearProducto);
 
 // PUT-> Modificar producto
-router.put("/", modificarProducto);
+router.put("/", protegerModoDemo, modificarProducto);
 
 // DELETE-> Eliminar producto
-router.delete("/:id", verificarId, eliminarProducto);
+router.delete("/:id", verificarId, protegerModoDemo, eliminarProducto);
 
 
 // Exportamos todas las rutas

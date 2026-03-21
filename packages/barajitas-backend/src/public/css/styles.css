@@ -226,7 +226,6 @@ width: 50%;
     outline: none;
     transition: 0.3s;
     box-sizing: border-box;
-    text-transform: capitalize;
 }
 
 #idProd:focus, #idProducto:focus {
@@ -247,7 +246,7 @@ width: 50%;
     outline: none;
     transition: 0.3s;
     box-sizing: border-box;
-    text-transform: capitalize;
+
 }
 
 .input-formulario:focus {
