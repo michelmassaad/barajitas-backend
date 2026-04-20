@@ -52,11 +52,14 @@ import path from 'path'; // 👈 AGREGÁ ESTO ARRIBA DE TODO
 // app.set("view engine", "ejs"); // Configuramos EJS como motor de plantillas
 // app.set("views", join(__dirname, "src", "views")); // Le indicamos la ruta donde estan las vistas ejs
 
-// Usamos process.cwd() para que siempre arranque desde la raíz del proyecto
-app.set("views", path.join(process.cwd(), "src", "views"));
-app.set("view engine", "ejs");
+const viewsPath = path.resolve(process.cwd(), 'src', 'views');
+app.set('views', viewsPath);
+app.set('view engine', 'ejs');
+
+// Hacé lo mismo para la carpeta public si tenés CSS/Imágenes
+app.use(express.static(path.resolve(process.cwd(), 'src', 'public')));
 // Si tenés archivos estáticos (CSS, JS del cliente), hacé lo mismo:
-app.use(express.static(path.join(process.cwd(), "src", "public")));
+// app.use(express.static(path.join(process.cwd(), "src", "public")));
 // las rutas de las vistas las gestiona Router
 app.use("/", vistasRoutes);
 
