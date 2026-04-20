@@ -11,7 +11,7 @@ Una plataforma completa de e-commerce fullstack para gestionar y mostrar tarjeta
 ## 🌐 Demos en Vivo
 
 - **🛒 Tienda Pública (Frontend):** [Visitar Tienda](https://figuritas-store-figuritas-backend.vercel.app/)
-- **⚙️ Panel de Administración (Backend):** [Acceso Admin](https://figuritas-backend.up.railway.app/login)
+- **⚙️ Panel de Administración (Backend):** [Acceso Admin](https://figuritas-store-figuritas-backend-1.vercel.app/login)
 
 ### ⚡ Acceso Rápido (Modo Demo)
 En la página de login del backend encontrarás un **botón de "Acceso Rápido"** que rellena automáticamente las credenciales de demostración (`test@test.com`).
