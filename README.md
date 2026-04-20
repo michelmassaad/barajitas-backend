@@ -64,8 +64,8 @@ En la página de login del backend encontrarás un **botón de "Acceso Rápido"*
 - **CORS** - Compartir recursos cross-origin
 
 ### Despliegue y DevOps
-- **Vercel** - Hosting de frontend estático
-- **Railway** - Hosting de API backend y panel admin
+- **Vercel** - Hosting de frontend estático y el Api backend
+- **Aiven** - Hosting de Database  
 - **npm Workspaces** - Gestión de monorepo
 
 ## 🏗️ Arquitectura
@@ -83,7 +83,7 @@ figuritas-store/
 
 ### Paquete Frontend
 - **Sitio Estático:** HTML/CSS/JS puro desplegado en Vercel
-- **Consumo de API:** Obtiene datos del backend en Railway
+- **Consumo de API:** Obtiene datos del backend en Aiven
 - **Gestión de Estado:** sessionStorage para carrito
 
 ### Paquete Backend
@@ -144,7 +144,7 @@ figuritas-store/
 
 ### URL Base
 ```
-https://figuritas-backend.up.railway.app
+https://figuritas-store-figuritas-backend-1.vercel.app/
 ```
 
 ### Endpoints
