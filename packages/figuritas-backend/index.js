@@ -48,6 +48,7 @@ app.use(session({
 /*===================
     Configuracion
 ===================*/
+import path from 'path'; // 👈 AGREGÁ ESTO ARRIBA DE TODO
 // app.set("view engine", "ejs"); // Configuramos EJS como motor de plantillas
 // app.set("views", join(__dirname, "src", "views")); // Le indicamos la ruta donde estan las vistas ejs
 
